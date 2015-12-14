@@ -94,6 +94,7 @@ angular
     'ngTouch',
     'youtube-embed',
     'cfp.hotkeys',
+    'ui.ace',
     'restangular'
   ])
   .config(function ($routeProvider, $locationProvider, RestangularProvider, hotkeysProvider) {

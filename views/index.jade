@@ -1,7 +1,7 @@
 extend layout
 
 block content
-  .row(style="margin-top:80px")
+  .row(style="margin-top:60px")
     .col-sm-3
       .video-container 
         #player(youtube-video,video-id="rUwdlEjo4ag")
@@ -12,31 +12,32 @@ block content
           .panel-heading
             ul.nav.nav-tabs
               li.active
-                a(href='#tab1presentation', data-toggle='tab') Presentation 
+                a(href='##tab1presentation', data-toggle='tab') Presentation 
               li
-                a(href='#tab2code', data-toggle='tab') Code 
+                a(href='##tab2code', data-toggle='tab') Code 
           .panel-body
             .tab-content
               #tab1presentation.tab-pane.fade.in.active
-                .presentation-container HTML5 Presentation
-                .browser(browser)
-                  .browser-nav-bar
-                    div(rel="toolbar")
-                      .btn-group
-                        a.btn.btn-default.browser-prev-btn(href='#')
-                          i.fa.fa-arrow-left
-                        a.btn.btn-default.browser-next-btn(href='#')
-                          i.fa.fa-arrow-right
-                        a.btn.btn-default.browser-refresh-btn(href='#')
-                          i.fa.fa-refresh
-                        .input-group
-                          input.browser-url.form-control(type='text', name='browser-url', value='http://cortezcristian.com/curso-node-js/material/slides/episodio1.html')
-                          a.browser-go-btn.input-group-addon
-                            i.fa.fa-chevron-circle-right
-                iframe#navone.browser-page-container(src='http://cortezcristian.com/curso-node-js/material/slides/episodio1.html', frameborder='0', align='center', scrolling='yes', allowtransparency='false', height="100%", width="100%")
+                .presentation-container
+                  .browser(browser)
+                    .browser-nav-bar
+                      div(rel="toolbar")
+                        .btn-group
+                          a.btn.btn-default.browser-prev-btn(href='#')
+                            i.fa.fa-arrow-left
+                          a.btn.btn-default.browser-next-btn(href='#')
+                            i.fa.fa-arrow-right
+                          a.btn.btn-default.browser-refresh-btn(href='#')
+                            i.fa.fa-refresh
+                          .input-group
+                            input.browser-url.form-control(type='text', name='browser-url', value='http://cortezcristian.com/curso-node-js/material/slides/episodio1.html')
+                            a.browser-go-btn.input-group-addon
+                              i.fa.fa-chevron-circle-right
+                  iframe#navone.browser-page-container(src='http://cortezcristian.com/curso-node-js/material/slides/episodio1.html', frameborder='0', align='center', scrolling='yes', allowtransparency='false', height="100%", width="100%")
               #tab2code.tab-pane.fade
-                .webeditor-container Code Editor
-                  pre#editor(aceeditor)
+                .webeditor-container
+                  pre#editor(ui-ace="{theme:'twilight', mode: 'javascript', rendererOptions: { fontSize: 17 } }")
+                    | // ...Some random code... 
                     | var helloWorld = function() {
                     |        return "Hello World";
                     | }

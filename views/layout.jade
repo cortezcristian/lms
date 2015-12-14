@@ -103,6 +103,8 @@ html(lang='en',ng-app="anyandgoApp")
     script(src='/components/ngFx/dist/ngFx.js')
     script(src='/components/angular-youtube-mb/src/angular-youtube-embed.js')
     script(src='/components/angular-hotkeys/build/hotkeys.js')
+    script(src='/components/angular-ui-ace/ui-ace.js')
+    script(src='/components/jbrowser/src/jquery.jbrowser.js')
     //endbower
     //-<!-- endbuild -->
     - } else {
@@ -110,6 +112,7 @@ html(lang='en',ng-app="anyandgoApp")
     - }
     - if(settings.envflag !== "production") {
     //-<!-- build:js(public) scripts/site-app.min.js -->
+    script(src='/components/ace-builds/src-min-noconflict/ace.js')
     //site:app:scripts
     script(src='/scripts/site/app.js')
     script(src='/scripts/site/controllers/main.js')
