@@ -2,11 +2,23 @@ extend layout
 
 block content
   .row(style="margin-top:60px")
-    .col-sm-3
+    .col-sm-4
       .video-container 
-        #player(youtube-video,video-id="rUwdlEjo4ag")
-      .challenge-container Display useful info
-    .col-sm-9
+        .embed-responsive.embed-responsive-16by9
+          #player(youtube-video,video-id="'rUwdlEjo4ag'")
+      .challenge-container
+        .panel.with-nav-tabs.panel-default
+          .panel-heading
+            ul.nav.nav-tabs
+              li.active
+                a(href='##info1', data-toggle='tab') Excercises
+              li
+                a(href='##info2', data-toggle='tab') About
+          .panel-body
+            .tab-content
+              #info1.tab-pane.fade.in.active  Display useful info
+              #info2
+    .col-sm-8
       .tabs-container
         .panel.with-nav-tabs.panel-default
           .panel-heading
